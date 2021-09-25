@@ -1,8 +1,6 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      FORM SUS
-    </ion-title>
+    <ion-title> FORM SUS </ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -19,9 +17,16 @@
     </ion-card-header>
 
     <ion-card-content>
-      lorem ipsum...lorem ipsum...lorem ipsum...lorem ipsum...lorem ipsum...lorem ipsum...
+      lorem ipsum...lorem ipsum...lorem ipsum...lorem ipsum...lorem
+      ipsum...lorem ipsum...
     </ion-card-content>
   </ion-card>
+
+  <ion-header [translucent]="true">
+    <ion-toolbar>
+      <ion-title> DADOS PESSOAIS </ion-title>
+    </ion-toolbar>
+  </ion-header>
 
   <ion-card>
     <ion-item class="ion-disabled">
@@ -41,10 +46,8 @@
     <ion-item class="ion-activated">
       <ion-icon name="today-outline" slot="start"></ion-icon>
       <ion-label>
-
-            <ion-datetime display-timezone="brt" placeholder="DD/MM/AAAA"></ion-datetime>
-
-        </ion-label>
+        <ion-datetime display-timezone="brt" placeholder="DD/MM/AAAA"></ion-datetime>
+      </ion-label>
     </ion-item>
 
     <ion-item>
@@ -53,6 +56,106 @@
         <ion-input placeholder="Nome da mãe"></ion-input>
       </ion-label>
     </ion-item>
+
+    <ion-item>
+      <ion-icon name="call-outline" slot="start"></ion-icon>
+      <ion-label>
+        <ion-input placeholder="Telefone para contato" type="tel"></ion-input>
+      </ion-label>
+    </ion-item>
   </ion-card>
 
+  <ion-header [translucent]="true">
+    <ion-toolbar>
+      <ion-title> ENDEREÇO </ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-card>
+    <ion-item>
+      <ion-icon name="location-outline" slot="start"></ion-icon>
+      <ion-label>
+        <ion-input placeholder="Rua"></ion-input>
+      </ion-label>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon name="home-outline" slot="start"></ion-icon>
+      <ion-label>
+        <ion-input placeholder="Bairro"></ion-input>
+      </ion-label>
+    </ion-item>
+
+    <ion-item>
+      <ion-icon name="grid-outline" slot="start"></ion-icon>
+      <ion-label>
+        <ion-input placeholder="Número"></ion-input>
+      </ion-label>
+    </ion-item>
+
+  </ion-card>
+
+  <ion-header [translucent]="true">
+    <ion-toolbar>
+      <ion-title> INFORMAÇÕES CLINICAS </ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-card>
+    <!--caixa de seleção-->
+    <ion-list>
+      <ion-list-header>SINTOMAS</ion-list-header>
+      <ion-item>
+        <ion-label>Jon Snow</ion-label>
+        <ion-checkbox color="primary" slot="start"></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Jon Snow</ion-label>
+        <ion-checkbox color="primary" slot="start"></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Jon Snow</ion-label>
+        <ion-checkbox color="primary" slot="start"></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Jon Snow</ion-label>
+        <ion-checkbox color="primary" slot="start"></ion-checkbox>
+      </ion-item>
+    </ion-list>
+  </ion-card>
 </ion-content>
+
+<style>
+  import {
+    Component
+  }
+
+  from '@angular/core';
+
+  @Component( {
+      selector: 'app-page-home',
+      templateUrl: 'home.page.html',
+      styleUrls: ['home.page.scss']
+    }
+
+  ) export class HomePage {
+    public form=[ {
+      val: 'Pepperoni', isChecked: true
+    }
+
+    ,
+      {
+      val: 'Sausage', isChecked: false
+    }
+
+    ,
+      {
+      val: 'Mushroom', isChecked: false
+    }
+
+    ];
+  }
+</style>

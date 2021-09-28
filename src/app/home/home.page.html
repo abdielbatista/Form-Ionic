@@ -1,4 +1,4 @@
-<ion-header [translucent]="true">
+<ion-header [translucent]="true" class="teste">
   <ion-toolbar>
     <ion-title> FORM SUS </ion-title>
   </ion-toolbar>
@@ -106,26 +106,57 @@
     <ion-list>
       <ion-list-header>SINTOMAS</ion-list-header>
       <ion-item>
-        <ion-label>Jon Snow</ion-label>
+        <ion-label>Dor de cabeça</ion-label>
         <ion-checkbox color="primary" slot="start"></ion-checkbox>
       </ion-item>
 
       <ion-item>
-        <ion-label>Jon Snow</ion-label>
+        <ion-label>Dor de garganta</ion-label>
         <ion-checkbox color="primary" slot="start"></ion-checkbox>
       </ion-item>
 
       <ion-item>
-        <ion-label>Jon Snow</ion-label>
+        <ion-label>Dor no corpo</ion-label>
         <ion-checkbox color="primary" slot="start"></ion-checkbox>
       </ion-item>
 
       <ion-item>
-        <ion-label>Jon Snow</ion-label>
+        <ion-label>Coriza</ion-label>
         <ion-checkbox color="primary" slot="start"></ion-checkbox>
       </ion-item>
     </ion-list>
   </ion-card>
+
+  <ion-card>
+    <!--caixa de seleção-->
+    <ion-list>
+      <ion-list-header>COMORBIDADES</ion-list-header>
+      <ion-item>
+        <ion-label>Doenças respiratórias</ion-label>
+        <ion-checkbox color="primary" slot="start"></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Doenças cardíacas</ion-label>
+        <ion-checkbox color="primary" slot="start"></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Diabetes</ion-label>
+        <ion-checkbox color="primary" slot="start"></ion-checkbox>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Doencas renais</ion-label>
+        <ion-checkbox color="primary" slot="start"></ion-checkbox>
+      </ion-item>
+    </ion-list>
+  </ion-card>
+
+  <div class="ion-text-center">
+  <ion-button type="submit">ENVIAR</ion-button>
+</div>
+
 </ion-content>
 
 <style>

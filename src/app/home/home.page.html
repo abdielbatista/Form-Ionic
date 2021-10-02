@@ -13,7 +13,8 @@
 
   <ion-card>
     <ion-card-header>
-      <ion-card-title id="titulo">Formulário para notificação de síndrome gripal</ion-card-title>
+      <ion-card-title id="titulo">Formulário para notificação de síndrome gripal</ion-card-title
+      >
     </ion-card-header>
 
     <ion-card-content>
@@ -32,35 +33,35 @@
     <ion-item class="ion-disabled">
       <ion-icon name="person-outline" slot="start"></ion-icon>
       <ion-label>
-        <ion-input placeholder="Nome"></ion-input>
+        <ion-input [(ngModel)]="nome" type="text" placeholder="Nome"></ion-input>
       </ion-label>
     </ion-item>
 
     <ion-item>
       <ion-icon name="reader-outline" slot="start"></ion-icon>
       <ion-label>
-        <ion-input type="number" placeholder="CPF com pontuação"></ion-input>
+        <ion-input [(ngModel)]="cpf" type="text" placeholder="CPF com pontuação"></ion-input>
       </ion-label>
     </ion-item>
 
     <ion-item class="ion-activated">
       <ion-icon name="today-outline" slot="start"></ion-icon>
       <ion-label>
-        <ion-datetime display-timezone="brt" placeholder="DD/MM/AAAA"></ion-datetime>
+        <ion-datetime [(ngModel)]="data_nasc" type="data" displayFormat="DD/MM/YYYY" placeholder="DD/MM/YYYY"></ion-datetime>
       </ion-label>
     </ion-item>
 
     <ion-item>
       <ion-icon name="people-outline" slot="start"></ion-icon>
       <ion-label>
-        <ion-input placeholder="Nome da mãe"></ion-input>
+        <ion-input [(ngModel)]="nome_mae" type="text" placeholder="Nome da mãe"></ion-input>
       </ion-label>
     </ion-item>
 
     <ion-item>
       <ion-icon name="call-outline" slot="start"></ion-icon>
       <ion-label>
-        <ion-input placeholder="Telefone para contato" type="tel"></ion-input>
+        <ion-input [(ngModel)]="tele" type="text" placeholder="Telefone para contato" type="tel"></ion-input>
       </ion-label>
     </ion-item>
   </ion-card>
@@ -75,24 +76,23 @@
     <ion-item>
       <ion-icon name="location-outline" slot="start"></ion-icon>
       <ion-label>
-        <ion-input placeholder="Rua"></ion-input>
+        <ion-input [(ngModel)]="rua" type="text" placeholder="Rua"></ion-input>
       </ion-label>
     </ion-item>
 
     <ion-item>
       <ion-icon name="home-outline" slot="start"></ion-icon>
       <ion-label>
-        <ion-input placeholder="Bairro"></ion-input>
+        <ion-input [(ngModel)]="bairro" type="text" placeholder="Bairro"></ion-input>
       </ion-label>
     </ion-item>
 
     <ion-item>
       <ion-icon name="grid-outline" slot="start"></ion-icon>
       <ion-label>
-        <ion-input placeholder="Número"></ion-input>
+        <ion-input [(ngModel)]="num" type="number" placeholder="Número"></ion-input>
       </ion-label>
     </ion-item>
-
   </ion-card>
 
   <ion-header [translucent]="true">
@@ -154,12 +154,12 @@
   </ion-card>
 
   <div class="ion-text-center">
-  <ion-button type="submit">ENVIAR</ion-button>
-</div>
-
+    <ion-button type="button" (click)="addNot()">ENVIAR</ion-button>
+  </div>
 </ion-content>
 
-<style>
+<style type="text/javascript">
+
   import {
     Component
   }
@@ -189,4 +189,5 @@
 
     ];
   }
+
 </style>

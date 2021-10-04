@@ -11,8 +11,8 @@ export class HomePage {
 
   nome: any;
   cpf: any;
-  data_nasc: any;
-  nome_mae: any;
+  datanasc: any;
+  nomemae: any;
   tele: any;
   rua: any;
   bairro: any;
@@ -27,21 +27,23 @@ export class HomePage {
   }*/
 
   addNot(){
-      let data = {
+
+      const data = {
         nome: this.nome,
         cpf: this.cpf,
-        data_nasc: this.data_nasc,
-        nome_mae: this.nome_mae,
+        datanasc: this.datanasc,
+        nomemae: this.nomemae,
         tele: this.tele,
         rua: this.rua,
         bairro: this.bairro,
-        num: this.num
-      }
+        num: this.num,
+      };
 
-        this._apiService.addNot(data).subscribe((res:any) => {
-          console.log("ERROR ===",res);
+        // eslint-disable-next-line no-underscore-dangle
+        this._apiService.addNot(data).subscribe((res: any) => {
+          console.log('SUCCESS ===',res);
         },(error: any) => {
-          console.log("ERROR ===",error);
-        })
+          console.log('ERROR ===',error);
+        });
   }
 }

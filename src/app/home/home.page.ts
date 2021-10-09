@@ -28,6 +28,7 @@ export class HomePage {
 
   addNot(){
 
+      //console.log(this.nome);
       const data = {
         nome: this.nome,
         cpf: this.cpf,
@@ -39,11 +40,13 @@ export class HomePage {
         num: this.num,
       };
 
+      //console.log(typeof data.nome);
+
         // eslint-disable-next-line no-underscore-dangle
-        this._apiService.addNot(data).subscribe((res: any) => {
-          console.log('SUCCESS ===',res);
+        this._apiService.addNot(JSON.stringify(data)).subscribe((res: any) => {
+          //console.log('SUCCESS ===',res);
         },(error: any) => {
-          console.log('ERROR ===',error);
+          //console.log('ERROR ===',error);
         });
   }
 }

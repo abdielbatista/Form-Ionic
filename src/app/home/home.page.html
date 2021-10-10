@@ -31,7 +31,7 @@
 
   <ion-card>
     <ion-item class="ion-disabled">
-      <ion-icon name="reader-outline" slot="start"></ion-icon>
+      <ion-icon name="person-outline" slot="start"></ion-icon>
       <ion-label>
         <ion-input [(ngModel)]="nome" type="text" placeholder="Nome"></ion-input>
       </ion-label>
@@ -90,7 +90,7 @@
     <ion-item>
       <ion-icon name="grid-outline" slot="start"></ion-icon>
       <ion-label>
-        <ion-input [(ngModel)]="num" type="number" placeholder="Número"></ion-input>
+        <ion-input [(ngModel)]="num" type="text" placeholder="Número"></ion-input>
       </ion-label>
     </ion-item>
   </ion-card>
@@ -156,6 +156,8 @@
   <div class="ion-text-center">
     <ion-button type="button" (click)="addNot()">ENVIAR</ion-button>
   </div>
+
+
 </ion-content>
 
 <!--

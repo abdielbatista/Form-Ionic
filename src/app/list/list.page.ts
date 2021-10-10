@@ -1,14 +1,12 @@
-import { Component } from '@angular/core';
-import { ApiService } from './api.service';
+import { Component, OnInit } from '@angular/core';
+import { ApiService } from '../home/api.service';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: 'home.page.html',
-  styleUrls: ['home.page.scss'],
+  selector: 'app-list',
+  templateUrl: './list.page.html',
+  styleUrls: ['./list.page.scss'],
 })
-
-
-export class HomePage {
+export class ListPage implements OnInit {
 
   nome: any;
   cpf: any;
@@ -24,6 +22,10 @@ export class HomePage {
     public _apiService: ApiService
   ){
     this.getNot();
+    //this.getEnd();
+  }
+  ngOnInit(): void {
+    throw new Error('Method not implemented.');
   }
 
   /*addNot(){
@@ -74,4 +76,16 @@ export class HomePage {
         console.log('ERROR ===',error);
       });
     }
+
+    /*getEnd(){
+      // eslint-disable-next-line no-underscore-dangle
+      this._apiService.getEnd().subscribe((res: any) => {
+        console.log('SUCCESS ===',res);
+        this.nots = res;
+      },(error: any) => {
+        //alert('ERROR');
+        console.log('ERROR ===',error);
+      });
+    }*/
 }
+

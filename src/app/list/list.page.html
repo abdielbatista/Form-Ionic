@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>PACIENTES NOTIFICADOS</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-list>
+
+    <ion-item lines="insert" *ngFor="let not of nots">
+      <ion-label>
+        <ion-icon name="people" slot="start"></ion-icon>
+        <h5>{{not.nome}} | {{not.cpf}} | {{not.tele}} | {{not.bairro}}</h5>
+      </ion-label>
+
+    </ion-item>
+
+</ion-list>
+
+</ion-content>

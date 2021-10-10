@@ -17,11 +17,7 @@ import { HttpHeaders } from '@angular/common/http';
       return this.http.post('http://localhost/backend/create.php',data);
   }
 
-    getNot(){
-      return this.http.get('http://localhost/backend/getNot.php');
+    getEnd(){
+      return this.http.get('http://localhost/backend/getEnd.php');
   }
-
-  getEnd(){
-    return this.http.get('http://localhost/backend/getEnd.php');
-}
 }

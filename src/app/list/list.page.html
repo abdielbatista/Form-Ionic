@@ -5,17 +5,31 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-
   <ion-list>
-
     <ion-item lines="insert" *ngFor="let not of nots">
       <ion-label>
         <ion-icon name="people" slot="start"></ion-icon>
         <h5>{{not.nome}} | {{not.cpf}} | {{not.tele}} | {{not.bairro}}</h5>
       </ion-label>
-
     </ion-item>
-
-</ion-list>
-
+  </ion-list>
 </ion-content>
+
+
+3 4 5 6 7 8 9 10 11 12 13
+<script>
+
+  senha = prompt("digite sua senha:ndigite sair para cancelar", "");
+  if (senha == "a sua senha") {
+    document.getElementById("pagina").style.display = "block";
+  } else if (senha == "") {
+    alert("campo obrigatorio");
+    window.location = "list.html";
+  } else if (senha == "sair") {
+    alert("cancelado");
+    window.location = "https://www.codigofonte.com.br";
+  } else {
+    alert("senha errada");
+    window.location = "list.html";
+  }
+</script>
